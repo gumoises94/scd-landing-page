@@ -1,9 +1,18 @@
 import React from 'react';
-import { NotebookTabs, Palette, School, Ruler, Star } from 'lucide-react';
+import "./App.css";
+import { NotebookTabs, Palette, School, Ruler, Star, Phone, Mail } from 'lucide-react';
 import Navbar from './components/Navbar';
-import LogoLarge from './assets/sena-creative-design-logo-large.jpeg';
+import LargeLogo from './assets/sena-creative-design-logo-large.jpeg';
+import VisualIdentity from './assets/id-visual.jpeg';
+import Stationery from './assets/papelaria.jpeg';
+import Facade from './assets/fachada.jpeg';
+import Interior from './assets/interior.jpeg';
 
 function App() {
+  const openProjectLink = (link:string) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -29,7 +38,7 @@ function App() {
             <div className="relative">
               <div className="w-full h-[400px] rounded-2xl overflow-hidden">
                 <img
-                  src={LogoLarge}
+                  src={LargeLogo}
                   alt="Design workspace"
                   className="w-full h-full object-cover"
                 />
@@ -83,27 +92,30 @@ function App() {
       <section id="portfolio" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">
-            Featured Work
+            Projetos em Destaque
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              'https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&q=80',
-              'https://images.unsplash.com/photo-1613979813687-1cad02a99a68?auto=format&fit=crop&q=80',
-              'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80',
-            ].map((img, index) => (
+              {img: VisualIdentity, link: 'https://www.instagram.com/p/C2vQnMXv5Nz/?igsh=bm5nN2IzMjNlM3h1'},
+              {img: Stationery, link: 'https://www.instagram.com/p/Cy6iy-XJ0Ik/?igsh=MWJub3Qyd3Zlajd5aA=='},
+              {img: Facade, link: 'https://www.instagram.com/reel/CwBQDj9J-Tn/?igsh=MWRyajVqcWhjYjM5MA=='},
+              {img: Interior, link: 'https://www.instagram.com/p/Cgw1397r1ew/?igsh=djNvNmhnamZ3dm82'},
+            ].map((item, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl"
-              >
+                className="group relative overflow-hidden rounded-xl div-link"
+                onClick={() => openProjectLink(item.link)}>
                 <img
-                  src={img}
+                  src={item.img}
                   alt={`Portfolio ${index + 1}`}
                   className="w-full h-[300px] object-cover"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <div className="text-center">
                     <Star className="w-8 h-8 text-[#ecbf82] mx-auto mb-2" />
-                    <p className="text-white">View Project</p>
+                    <p className="text-white">
+                      Visualizar projeto
+                    </p>
                   </div>
                 </div>
               </div>
@@ -113,34 +125,37 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-black/50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Let's Create Together</h2>
-          <p className="text-gray-300 mb-8">
-            Ready to transform your brand? Get in touch with us today.
-          </p>
-          <form className="space-y-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-[#cb6a9d]/20 focus:border-[#cb6a9d] outline-none"
-            />
-            <textarea
-              placeholder="Your message"
-              rows={4}
-              className="w-full px-4 py-3 rounded-lg bg-black/40 border border-[#cb6a9d]/20 focus:border-[#cb6a9d] outline-none"
-            ></textarea>
-            <button className="w-full bg-[#cb6a9d] hover:bg-[#ecbf82] text-white px-8 py-3 rounded-lg transition-colors">
-              Send Message
-            </button>
-          </form>
+      <section id="contact" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Contato
+          </h2>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Cards */}
+          <div className="p-8 rounded-xl bg-black/40 border border-[#cb6a9d]/20 hover:border-[#cb6a9d] transition-colors"
+              >
+                <div className="text-[#ecbf82] mb-4"><Phone className="w-8 h-8" /></div>
+                <h3 className="text-xl font-bold mb-3">Celular/Whatsapp</h3>
+                <p className="text-gray-400">(11) 93308-6480</p>
+              </div>
+
+          <div className="p-8 rounded-xl bg-black/40 border border-[#cb6a9d]/20 hover:border-[#cb6a9d] transition-colors">
+            <div className="text-[#ecbf82] mb-4"><Mail className="w-8 h-8" /></div>
+            <h3 className="text-xl font-bold mb-3">Email</h3>
+            <a href="mailto:patricia.sena21@outlook.com.br" 
+              className="text-blue-400 hover:text-blue-700">
+                patricia.sena21@outlook.com.br
+              </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center text-gray-400">
-          <p>© 2024 Pixelcraft. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sena Creative Design. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

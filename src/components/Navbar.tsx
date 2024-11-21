@@ -26,25 +26,25 @@ export default function Navbar() {
                 href="#home"
                 className="text-white hover:text-[#ecbf82] transition-colors"
               >
-                Home
+                Início
               </a>
               <a
                 href="#services"
                 className="text-white hover:text-[#ecbf82] transition-colors"
               >
-                Services
+                Serviços
               </a>
               <a
                 href="#portfolio"
                 className="text-white hover:text-[#ecbf82] transition-colors"
               >
-                Portfolio
+                Portifólio
               </a>
               <a
                 href="#contact"
                 className="text-white hover:text-[#ecbf82] transition-colors"
               >
-                Contact
+                Contato
               </a>
             </div>
           </div>
@@ -68,25 +68,25 @@ export default function Navbar() {
               href="#home"
               className="block text-white hover:text-[#ecbf82] px-3 py-2"
             >
-              Home
+              Início
             </a>
             <a
               href="#services"
               className="block text-white hover:text-[#ecbf82] px-3 py-2"
             >
-              Services
+              Serviços
             </a>
             <a
               href="#portfolio"
               className="block text-white hover:text-[#ecbf82] px-3 py-2"
             >
-              Portfolio
+              Portifólio
             </a>
             <a
               href="#contact"
               className="block text-white hover:text-[#ecbf82] px-3 py-2"
             >
-              Contact
+              Contato
             </a>
           </div>
         </div>

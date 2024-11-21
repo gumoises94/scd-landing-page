@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Monitor, Palette, PenTool, Star } from 'lucide-react';
+import { NotebookTabs, Palette, School, Ruler, Star } from 'lucide-react';
 import Navbar from './components/Navbar';
 import LogoLarge from './assets/sena-creative-design-logo-large.jpeg';
 
@@ -15,7 +15,7 @@ function App() {
             <div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 Soluções de Design{' '}
-                <span className="text-[#cb6a9d]">Creativo</span>
+                <span className="text-[#cb6a9d]">Criativo</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Transforme sua marca com nossos serviços de design inovadores.
@@ -42,23 +42,28 @@ function App() {
       {/* Services Section */}
       <section id="services" className="py-20 px-4 bg-black/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold text-center mb-16">Nossos Serviços</h2>
+          <div className="grid md:grid-cols-4 gap-12">
             {[
               {
                 icon: <Palette className="w-8 h-8" />,
-                title: 'Brand Identity',
-                desc: 'Create a unique and memorable brand identity that sets you apart.',
+                title: 'Identidade Visual',
+                desc: 'Crie uma identidade de marca única e memorável que o diferencie no mercado',
               },
               {
-                icon: <Monitor className="w-8 h-8" />,
-                title: 'Web Design',
-                desc: 'Beautiful, responsive websites that engage and convert visitors.',
+                icon: <NotebookTabs className="w-8 h-8" />,
+                title: 'Papelaria',
+                desc: 'Tudo para sua criatividade e organização: papéis, materiais e soluções personalizadas',
               },
               {
-                icon: <PenTool className="w-8 h-8" />,
-                title: 'Custom Graphics',
-                desc: 'Eye-catching graphics tailored to your specific needs.',
+                icon: <School className="w-8 h-8" />,
+                title: 'Fachadas',
+                desc: 'Damos vida à sua marca com fachadas únicas que destacam seu negócio',
+              },
+              {
+                icon: <Ruler className="w-8 h-8" />,
+                title: 'Interiores',
+                desc: 'Design interno que reflete a essência da sua marca"',
               },
             ].map((service, index) => (
               <div

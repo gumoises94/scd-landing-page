@@ -23,7 +23,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                Soluções de Design{' '}
+                Soluções em Design{' '}
                 <span className="text-[#cb6a9d]">Criativo</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">

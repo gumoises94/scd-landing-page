@@ -137,13 +137,16 @@ function App() {
               >
                 <div className="text-[#ecbf82] mb-4"><Phone className="w-8 h-8" /></div>
                 <h3 className="text-xl font-bold mb-3">Celular/Whatsapp</h3>
-                <p className="text-gray-400">(11) 93308-6480</p>
+                <a href="https://wa.me/5511933086480" target="_blank"
+                    className="text-blue-400 hover:text-blue-700">
+                    (11) 93308-6480
+                </a>
               </div>
 
           <div className="p-8 rounded-xl bg-black/40 border border-[#cb6a9d]/20 hover:border-[#cb6a9d] transition-colors">
             <div className="text-[#ecbf82] mb-4"><Mail className="w-8 h-8" /></div>
             <h3 className="text-xl font-bold mb-3">Email</h3>
-            <a href="mailto:patricia.sena21@outlook.com.br" 
+            <a href="mailto:patricia.sena21@outlook.com.br" target="_blank"
               className="text-blue-400 hover:text-blue-700">
                 patricia.sena21@outlook.com.br
               </a>
